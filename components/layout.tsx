@@ -141,7 +141,7 @@ export default function Layout() {
     <div>
     
     <div className={styles.container}>
-      <nav className={styles.navbar}><a href="https://slingshot.finance"><Image src="/images/logo.svg" alt="Slingshot" width={215} height={56} /></a></nav>
+      <nav className={styles.navbar}><a href="https://slingshot.finance"><span className={styles.logoSmaller}><Image src="/images/logo-condensed.svg" alt="Slingshot" width={33} height={26} /></span><span className={styles.logoBigger}><Image src="/images/logo.svg" alt="Slingshot" width={215} height={56} /></span></a></nav>
       <div className={styles.innerContainer}>
       
             <header className={cn(styles.header1, styles.center, styles.maxWidth)}>Discover and trade 7,500+ crypto tokens at the best prices</header>
