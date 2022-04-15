@@ -1,5 +1,4 @@
 import cn from 'classnames';
-import Head from 'next/head'
 import Image from 'next/image'
 import styles from './layout.module.scss'
 
@@ -140,34 +139,7 @@ export default function Layout() {
   const numOfTwitterCards = fakeTwitterData.length;
   return (
     <div>
-    <Head>
-      <link rel="icon" href="/favicon.ico" />
-      <link
-          rel="preload"
-          href="/fonts/sequel-sans-regular.ttf"
-          as="font"
-          crossOrigin=""
-        />
-        <link
-          rel="preload"
-          href="/fonts/sequel-black-65.ttf"
-          as="font"
-          crossOrigin=""
-        />
-        <link
-          rel="preload"
-          href="/fonts/sequel-sans-bold.ttf"
-          as="font"
-          crossOrigin=""
-        />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta
-        name="description"
-        content="Join the waitlist for Slingshot"
-      />
-      <meta name="og:title" content="Slingshot" />
-      <meta name="twitter:card" content="summary_large_image" />
-    </Head>
+    
     <div className={styles.container}>
       <nav className={styles.navbar}><a href="https://slingshot.finance"><Image src="/images/logo.svg" alt="Slingshot" width={215} height={56} /></a></nav>
       <div className={styles.innerContainer}>
@@ -175,7 +147,7 @@ export default function Layout() {
             <header className={cn(styles.header1, styles.center, styles.maxWidth)}>Discover and trade 7,500+ crypto tokens at the best prices</header>
             <p className={cn(styles.headerText, styles.center, styles.maxWidth)}>Join the waitlist and refer your friends to earn up to $2,500 in NFT rewards and the chance to win 1 BTC!</p>
 
-            <div className={styles.input}><input className={styles.textInput} type="text" placeholder="Enter email address"></input><button onClick={() => alert('hey')} className={styles.submit} type="submit">Join the waitlist</button></div>
+            <div className={styles.input}><input className={styles.textInput} type="text" placeholder="Enter email address"></input><button onClick={() => alert('hey')} className={styles.submit} type="submit">Join<span className={styles.extraText}> the waitlist</span></button></div>
 
             <a href='#' className={cn(styles.learnMore, styles.center)}>Learn more <Image src="/images/greenarrow.svg" width={12} height={12} /></a>
             <div className={styles.phoneSection}>
@@ -245,7 +217,7 @@ export default function Layout() {
 
       <div className={styles.innerContainer}>
             <header className={cn(styles.header3, styles.center, styles.maxWidth)}>Join over XXX,XXX people who have already signed up</header>
-            <div className={cn(styles.input, styles.secondInput)}><input className={styles.textInput} type="text" placeholder="Enter email address"></input><button onClick={() => alert('hey')} className={styles.submit} type="submit">Join the waitlist</button></div>
+            <div className={cn(styles.input, styles.secondInput)}><input className={styles.textInput} type="text" placeholder="Enter email address"></input><button onClick={() => alert('hey')} className={styles.submit} type="submit">Join<span className={styles.extraText}> the waitlist</span></button></div>
             <p className={cn(styles.smallText, styles.center, styles.maxWidth)}>Earn up to $2500 in NFT rewards and the chance to win 1 BTC when you refer friends.</p>
         </div>
       </div>

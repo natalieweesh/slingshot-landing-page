@@ -419,6 +419,12 @@ $twitterGray: #7D8088;
     cursor: pointer;
   }
 }
+.extraText {
+  display: none;
+  @include bigger {
+    display: inline;
+  }
+}
 
 .smallText {
   font-size: 1rem;
