@@ -1,0 +1,427 @@
+@mixin bigger {
+  @media (min-width: 850px) { @content; }
+}
+$black: #000;
+$white: #fff;
+$green: #66FF99;
+$offBlackText: #110E15;
+$cardBackground: #373A44;
+$twitterCardBackground: #1C1D22;
+$textGray: #D8D9DB;
+$lightTextGray: #FAFAFB;
+$twitterGray: #7D8088;
+
+.container {
+  background: $black;
+  color: $white;
+  overflow-x: hidden;
+}
+
+.innerContainer {
+  max-width: 72.5rem;
+  padding: 0 2rem 2rem;
+  margin: 0 auto;
+}
+
+.maxWidth {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar {
+  width: 100%;
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.backToHome {
+  margin: 3rem 0 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.smallCenter {
+  text-align: center;
+  @include bigger {
+    text-align: left;
+  }
+}
+
+.header1 {
+  font-size: 2rem;
+  line-height: 2.75rem;
+  font-family: SequelBlack;
+  margin: 2.6rem auto 4.4rem;
+  @include bigger {
+    font-size: 2.75rem;
+    line-height: 3.5rem;
+    margin: 8.8rem auto 2.6rem;
+  }
+}
+
+.header2 {
+  font-size: 1.5rem;
+  line-height: 2.1rem;
+  font-family: SequelBlack;
+  @include bigger {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+}
+
+.header3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: SequelBlack;
+  @include bigger {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+  }
+}
+
+.headerText {
+  font-size: 1rem;
+  color: $textGray;
+  @include bigger {
+    font-size: 1.5rem;
+  }
+}
+
+.iconText {
+  color: $textGray;
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+.label {
+  text-transform: uppercase;
+  color: $textGray;
+  font-size: 1rem;
+  @include bigger {
+    font-size: 1.125rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  margin-top: 9.4rem;
+  margin-bottom: 8.5rem;
+  @include bigger {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2rem;
+  }
+}
+
+.cardsSection {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 100%;
+  margin-bottom: 10.5rem;
+  @include bigger {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 0.75rem;
+  z-index: 0;
+  position: relative;
+  &::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    width: 150%;
+    height: 160%;
+    top: -30%;
+    left: -19%;
+    background: url('../public/images/dots.svg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transform: scale(-1, 1);
+  }
+  @include bigger {
+    grid-gap: 1rem;
+  }
+}
+
+.cardsSectionText {
+  max-width: 85vw;
+  margin-bottom: 4.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  background: $cardBackground;
+  border-radius: 0.75rem;
+  min-width: 9.5rem;
+  height: 11rem;
+  padding: 0.75rem;
+  @include bigger {
+    border-radius: 1rem;
+    min-width: 12.5rem;
+    height: 14.5rem;
+    padding: 1rem;
+  }
+}
+
+.imageContainer {
+  display: flex;
+  height: 8rem;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.coinImage {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 3.75rem;
+  overflow: hidden;
+}
+
+.coinTitle, .coinPrice {
+  display: block;
+  font-size: 0.75rem;
+  margin-top: 1rem;
+  @include bigger {
+    font-size: 1rem;
+  }
+}
+
+.coinPrice {
+  line-height: 1rem;
+  margin-top: 0;
+  @include bigger {
+    line-height: 1.3rem;
+  }
+}
+
+.coinChange {
+  font-size: 1.125rem;
+  line-height: 1rem;
+  @include bigger {
+    font-size: 1.5rem;
+  }
+}
+
+.arrowContainer {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  @include bigger {
+    width: 1rem!important;
+    height: 1rem!important;
+  }
+}
+
+.upsideDown {
+  transform: rotate(180deg);
+}
+
+.twitterCard {
+  position: relative;
+  padding: 1rem;
+  background: $twitterCardBackground;
+  border-radius: 1rem;
+  min-width: 19.25rem;
+  height: 12.4rem;
+  display: inline-flex;
+  margin: 0 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  @include bigger {
+    height: 19.4rem;
+  }
+}
+
+.twitterImage {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 2.75rem;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.twitterProfileSection {
+  display: flex;
+  flex-direction: row;
+  span {
+    display: block;
+    line-height: 1.25rem;
+  }
+}
+
+.username {
+  color: $twitterGray;
+}
+
+.twitterCaption {
+  font-size: 0.8125rem;
+  margin-top: 1.5rem;
+}
+
+.twitterLogo {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.twitterDate {
+  color: $twitterGray;
+  font-size: 0.75rem;
+}
+
+.twitterSectionTop, .twitterSectionBottom {
+  height: 12.375rem;
+  width: 100%;
+  overflow-x: auto;
+  display: flex;
+  margin-top: 2.6rem;
+  @include bigger {
+    display: none;
+  }
+}
+
+.twitterSectionBottom {
+  margin-top: 1.5rem;
+  margin-bottom: 8.6rem;
+}
+
+.twitterSectionBigger {
+  width: 100%;
+  height: 19.4rem;
+  margin-top: 2.6rem;
+  margin-bottom: 8.6rem;
+  display: none;
+  overflow-x: auto;
+  @include bigger {
+    margin-top: 4.125rem;
+  }
+  &::after, &::before {
+    content: "";
+    height: 19.4rem;
+    width: 4rem;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    background: linear-gradient(to right, transparent 0%, $black 100%);
+  }
+  &::before {
+    left: 0;
+    right: auto;
+    background: linear-gradient(to left, transparent 0%, $black 100%);
+  }
+  @include bigger {
+    display: flex;
+  }
+}
+
+.phoneSection {
+  position: relative;
+  width: 100%;
+  margin-bottom: 6.25rem;
+  z-index: 0;
+  &::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -25%;
+    left: -25%;
+    background: url('../public/images/dots.svg') no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+}
+
+.phone {
+  height: auto;
+  max-width: 30rem;
+}
+
+.phoneWrapper {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 53rem;
+  margin: 11% auto 0;
+  @include bigger {
+    // margin-top: 20%;
+  }
+}
+
+.learnMore {
+  color: $green;
+  font-size: 0.875rem;
+  text-decoration: underline;
+  display: block;
+  font-family: SequelSansBold;
+}
+
+.input {
+  height: 3.125rem;
+  background: $white;
+  border-radius: 0.5rem;
+  display: flex;
+  width: 100%;
+  border: 4px solid $white;
+  max-width: 39.5rem;  
+  margin: 5.6rem auto 2.4rem;
+  @include bigger {
+    margin: 7.25rem auto 5rem;
+  }
+}
+
+.secondInput {
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+}
+
+.textInput {
+  height: 100%;
+  flex-grow: 1;
+  outline: 0;
+  border: 0;
+  margin-left: 0.5rem;
+  font-family: SequelSans;
+}
+
+.submit {
+  background: $green;
+  color: $offBlackText;
+  font-size: 0.875rem;
+  padding: 1rem 2rem;
+  border: 0;
+  border-radius: 0.5rem;
+  line-height: 0;
+  height: 2.625rem;
+  font-family: SequelSansBold;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.smallText {
+  font-size: 1rem;
+  color: $textGray;
+  margin-bottom: 5rem;
+}
