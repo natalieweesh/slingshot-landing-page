@@ -1,4 +1,5 @@
 import cn from 'classnames';
+import animateScrollTo from 'animated-scroll-to';
 import Image from 'next/image';
 import { CardsSection } from './CardsSection';
 import { PhoneSection } from './PhoneSection';
@@ -6,7 +7,7 @@ import { ThreeColumnSection } from './ThreeColumnSection';
 import { TwitterSection } from './TwitterSection';
 import styles from './layout.module.scss';
 
-export default function Layout() {
+const Layout = () => {
   return (
     <div>
       <div className={styles.container}>
@@ -15,9 +16,11 @@ export default function Layout() {
           <header className={cn(styles.header1, styles.center, styles.maxWidth)}>Discover and trade 7,500+ crypto tokens at the best prices</header>
           <p className={cn(styles.headerText, styles.center, styles.maxWidth)}>Join the waitlist and refer your friends to earn up to $2,500 in NFT rewards and the chance to win 1 BTC!</p>
           <div className={styles.input}><input className={styles.textInput} type="text" placeholder="Enter email address"></input><button onClick={() => alert('hey')} className={styles.submit} type="submit">Join<span className={styles.extraText}> the waitlist</span></button></div>
-          <a href='#' className={cn(styles.learnMore, styles.center)}>Learn more <Image src="/images/greenarrow.svg" width={12} height={12} /></a>
+          <button type="button" onClick={() => {
+            animateScrollTo(document.getElementById('experience'));
+          }} className={cn(styles.learnMore, styles.center)}>Learn more <Image src="/images/greenarrow.svg" width={12} height={12} /></button>
           <PhoneSection />
-          <p className={cn(styles.label, styles.center)}>Experience</p>
+          <p className={cn(styles.label, styles.center)} id="experience">Experience</p>
           <header className={cn(styles.header2, styles.center, styles.maxWidth)}>Slingshot is a web3 trading platform that lets you trade thousands of crypto tokens at the best prices, at lightning fast speed.</header>
           <ThreeColumnSection />
           <CardsSection />
@@ -33,3 +36,5 @@ export default function Layout() {
     </div>
   )
 }
+
+export default Layout

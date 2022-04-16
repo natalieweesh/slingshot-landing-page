@@ -2,6 +2,10 @@
   @media (min-width: 850px) { @content; }
 }
 
+@mixin huger {
+  @media (min-width: 1000px) { @content; }
+}
+
 $black: #000;
 $white: #fff;
 $green: #66FF99;
@@ -30,9 +34,12 @@ $twitterGray: #7D8088;
   font-family: SequelBlack;
   margin: 2.6rem auto 4.4rem;
   @include bigger {
+    font-size: 2.5rem;
+  }
+  @include huger {
     font-size: 2.75rem;
     line-height: 3.5rem;
-    margin: 8.8rem auto 2.6rem;
+    margin: 5.8rem auto 2.6rem;
   }
 }
 
@@ -41,6 +48,9 @@ $twitterGray: #7D8088;
   line-height: 2.1rem;
   font-family: SequelBlack;
   @include bigger {
+    font-size: 1.75rem;
+  }
+  @include huger {
     font-size: 2rem;
     line-height: 2.8rem;
   }
