@@ -88,16 +88,21 @@
 }
 
 .square5 {
-  left: 40%;
+  left: 25%;
   top: 80%;
   @include bigger {
     top: 88%;
+		left: 40%;
   }
 }
 
 .square6 {
-  right: 15%;
-  bottom: 20%;
+  right: 5%;
+  bottom: 5%;
+	@include bigger {
+		right: 15%;
+		bottom: 20%;
+	}
 }
 
 .square7 {
@@ -110,7 +115,10 @@
 
 .square8 {
   right: 15%;
-  top: 30%;
+	top: 35%;
+	@include bigger {
+		top: 30%;
+	}
 }
 
 .square9 {
