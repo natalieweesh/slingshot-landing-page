@@ -1,0 +1,106 @@
+@import "./variables.module";
+
+.cardsSection {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 100%;
+  margin-bottom: 10.5rem;
+  @include bigger {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 0.75rem;
+  z-index: 0;
+  position: relative;
+  &::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    width: 150%;
+    height: 160%;
+    top: -30%;
+    left: -19%;
+    background: url('../public/images/dots.svg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transform: scale(-1, 1);
+  }
+  @include bigger {
+    grid-gap: 1rem;
+  }
+}
+
+.cardsSectionText {
+  max-width: 85vw;
+  margin-bottom: 4.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  background: $cardBackground;
+  border-radius: 0.75rem;
+  min-width: 9.5rem;
+  height: 11rem;
+  padding: 0.75rem;
+  @include bigger {
+    border-radius: 1rem;
+    min-width: 12.5rem;
+    height: 14.5rem;
+    padding: 1rem;
+  }
+}
+
+
+.coinImage {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 3.75rem;
+  overflow: hidden;
+}
+
+.coinTitle, .coinPrice {
+  display: block;
+  font-size: 0.75rem;
+  margin-top: 1rem;
+  @include bigger {
+    font-size: 1rem;
+  }
+}
+
+.coinPrice {
+  line-height: 1rem;
+  margin-top: 0;
+  @include bigger {
+    line-height: 1.3rem;
+  }
+}
+
+.coinChange {
+  font-size: 1.125rem;
+  line-height: 1rem;
+  @include bigger {
+    font-size: 1.5rem;
+  }
+}
+
+.arrowContainer {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  @include bigger {
+    width: 1rem!important;
+    height: 1rem!important;
+  }
+}
+
+.upsideDown {
+  transform: rotate(180deg);
+}

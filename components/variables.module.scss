@@ -1,0 +1,58 @@
+@mixin bigger {
+  @media (min-width: 850px) { @content; }
+}
+
+$black: #000;
+$white: #fff;
+$green: #66FF99;
+$offBlackText: #110E15;
+$cardBackground: #373A44;
+$twitterCardBackground: #1C1D22;
+$textGray: #D8D9DB;
+$lightTextGray: #FAFAFB;
+$twitterGray: #7D8088;
+$squareGray: #C4C4C4;
+
+
+.center {
+  text-align: center;
+}
+
+.smallCenter {
+  text-align: center;
+  @include bigger {
+    text-align: left;
+  }
+}
+
+.header1 {
+  font-size: 2rem;
+  line-height: 2.75rem;
+  font-family: SequelBlack;
+  margin: 2.6rem auto 4.4rem;
+  @include bigger {
+    font-size: 2.75rem;
+    line-height: 3.5rem;
+    margin: 8.8rem auto 2.6rem;
+  }
+}
+
+.header2 {
+  font-size: 1.5rem;
+  line-height: 2.1rem;
+  font-family: SequelBlack;
+  @include bigger {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+}
+
+.header3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: SequelBlack;
+  @include bigger {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+  }
+}
