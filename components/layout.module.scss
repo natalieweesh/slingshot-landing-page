@@ -10,6 +10,7 @@ $twitterCardBackground: #1C1D22;
 $textGray: #D8D9DB;
 $lightTextGray: #FAFAFB;
 $twitterGray: #7D8088;
+$squareGray: #C4C4C4;
 
 .container {
   background: $black;
@@ -445,4 +446,87 @@ $twitterGray: #7D8088;
   @include bigger {
     display: none;
   }
+}
+
+.square {
+  width: 4.625rem;
+  height: 5rem;
+  border-radius: 1rem;
+  background: $squareGray;
+  overflow: hidden;
+  transform: scale(0.6);
+  @include bigger {
+    transform: scale(1);
+  }
+}
+
+.largeSquare {
+  width: 11.5rem;
+  height: 11.5rem;
+}
+
+.mediumSquare {
+  width: 7.25rem;
+  height: 7.875rem;
+}
+
+.parallaxSquare {
+  position: absolute;
+}
+
+.square1 {
+  top: 50%;
+  left: -5%;
+  @include bigger {
+    left: 0%;
+  }
+}
+
+.square2 {
+  left: 10%;
+  top: 10%;
+}
+
+.square3 {
+  left: 10%;
+  top: 80%;
+}
+
+.square4 {
+  left: 12%;
+  top: 40%;
+  @include bigger {
+    left: 22%;
+  }
+}
+
+.square5 {
+  left: 40%;
+  top: 80%;
+  @include bigger {
+    top: 88%;
+  }
+}
+
+.square6 {
+  right: 15%;
+  bottom: 20%;
+}
+
+.square7 {
+  right: 0%;
+  bottom: 45%;
+  @include bigger {
+    right: 10%;
+  }
+}
+
+.square8 {
+  right: 15%;
+  top: 30%;
+}
+
+.square9 {
+  top: 8%;
+  right: 8%;
 }
