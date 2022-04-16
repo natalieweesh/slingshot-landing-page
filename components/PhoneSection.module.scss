@@ -17,9 +17,9 @@
     background-position: center center;
     background-size: contain;
   }
-	@include bigger {
-		margin-bottom: 18.75rem;
-	}
+  @include bigger {
+    margin-bottom: 18.75rem;
+  }
 }
 
 .phone {
@@ -72,9 +72,9 @@
 .square2 {
   left: 10%;
   top: 10%;
-	@include bigger {
-		left: 15%;
-	}
+  @include bigger {
+    left: 15%;
+  }
 }
 
 .square3 {
@@ -92,17 +92,17 @@
   top: 80%;
   @include bigger {
     top: 88%;
-		left: 40%;
+    left: 40%;
   }
 }
 
 .square6 {
   right: 5%;
   bottom: 5%;
-	@include bigger {
-		right: 15%;
-		bottom: 20%;
-	}
+  @include bigger {
+    right: 15%;
+    bottom: 20%;
+  }
 }
 
 .square7 {
@@ -115,10 +115,10 @@
 
 .square8 {
   right: 15%;
-	top: 35%;
-	@include bigger {
-		top: 30%;
-	}
+  top: 35%;
+  @include bigger {
+    top: 30%;
+  }
 }
 
 .square9 {
