@@ -6,7 +6,6 @@
   margin-bottom: 6.25rem;
   z-index: 0;
   display: none;
-  display: block;
   &::before {
     content: '';
     z-index: -1;
@@ -45,7 +44,9 @@
   border-radius: 1rem;
   overflow: hidden;
   transform: scale(0.6);
+  position: absolute;
   @include bigger {
+    position: relative;
     transform: scale(1);
   }
 }
@@ -129,14 +130,14 @@
 
 .square8 {
   right: 15%;
-  top: 35vh;
+  top: 60vh;
   @include bigger {
     top: 30%;
   }
 }
 
 .square9 {
-  top: 58%;
+  top: 100vh;
   right: 8%;
   @include bigger {
     top: 8%;
@@ -145,9 +146,8 @@
 
 
 .phoneSection {
-  display: none;
   position: relative;
-  height: 150vh;
+  height: 200vh;
   margin-top: 1rem;
   margin-bottom: 5rem;
   border: 1px solid red;

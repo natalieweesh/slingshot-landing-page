@@ -1,10 +1,22 @@
 import cn from 'classnames';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 import Image from 'next/image';
 import styles from './PhoneSection.module.scss';
 
 export const PhoneSection = () => {
+  // const [offset, setOffset] = useState(0);
+
+  //   useEffect(() => {
+  //     const phoneStartPosition = document.getElementById('phone-section').getBoundingClientRect().top;
+  //       const onScroll = () => setOffset(window.pageYOffset);
+  //       // clean up code
+  //       window.removeEventListener('scroll', onScroll);
+  //       window.addEventListener('scroll', onScroll, { passive: true });
+  //       console.log('hey', offset, phoneStartPosition)
+
+  //       return () => window.removeEventListener('scroll', onScroll);
+  //   }, []);
   return (
     <ParallaxProvider>
       <div className={cn(styles.innerContainer, styles.noPaddingBottom)}>
@@ -21,7 +33,7 @@ export const PhoneSection = () => {
           <Parallax className={cn(styles.parallaxSquare, styles.square9)} speed={8}><div className={styles.square}><Image src="/images/square9.svg" layout="responsive" width="100%" height="100%" /></div></Parallax>
         </div>
       </div>
-      <div className={styles.phoneSection}>
+      {/* <div id="phone-section" className={styles.phoneSection}>
         <div className={cn(styles.sticky)}>
           <div className={styles.phone}><Image src="/images/phone.svg" width={360} height={730} /></div>
           <Parallax className={cn(styles.parallaxSquare, styles.square1)} speed={4}><div className={cn(styles.square, styles.largeSquare)}><Image src="/images/square1.svg" layout="responsive" width="100%" height="100%" /></div></Parallax>
@@ -34,6 +46,20 @@ export const PhoneSection = () => {
           <Parallax className={cn(styles.parallaxSquare, styles.square8)} speed={4}><div className={cn(styles.square, styles.mediumSquare)}><Image src="/images/square8.svg" layout="responsive" width="100%" height="100%" /></div></Parallax>
           <Parallax className={cn(styles.parallaxSquare, styles.square9)} speed={5}><div className={styles.square}><Image src="/images/square9.svg" layout="responsive" width="100%" height="100%" /></div></Parallax>
         </div>
+      </div> */}
+      <div className={styles.phoneSection}>
+      <div className={cn(styles.sticky)}>
+      <div className={styles.phone}><Image src="/images/phone.svg" width={360} height={730} /></div>
+      </div>
+      <div className={cn(styles.square, styles.square1, styles.largeSquare)}><Image src="/images/square1.svg" layout="responsive" width="100%" height="100%" /></div>
+      <div className={cn(styles.square, styles.square2, styles.mediumSquare)}><Image src="/images/square2.svg" layout="responsive" width="100%" height="100%" /></div>
+      <div className={cn(styles.square, styles.square3)}><Image src="/images/square3.svg" layout="responsive" width="100%" height="100%" /></div>
+      <div className={cn(styles.square, styles.square4)}><Image src="/images/square4.svg" layout="responsive" width="100%" height="100%" /></div>
+      <div className={cn(styles.square, styles.square5, styles.largeSquare)}><Image src="/images/square5.svg" layout="responsive" width="100%" height="100%" /></div>
+      <div className={cn(styles.square, styles.square6, styles.mediumSquare)}><Image src="/images/square6.svg" layout="responsive" width="100%" height="100%" /></div>
+      <div className={cn(styles.square, styles.square7)}><Image src="/images/square7.svg" layout="responsive" width="100%" height="100%" /></div>
+      <div className={cn(styles.square, styles.square8, styles.mediumSquare)}><Image src="/images/square8.svg" layout="responsive" width="100%" height="100%" /></div>
+      <div className={cn(styles.square, styles.square9)}><Image src="/images/square9.svg" layout="responsive" width="100%" height="100%" /></div>
       </div>
     </ParallaxProvider>
   )
