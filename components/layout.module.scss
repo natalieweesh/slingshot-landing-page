@@ -3,13 +3,6 @@
 .container {
   background: $black;
   color: $white;
-  overflow-x: hidden;
-}
-
-.innerContainer {
-  max-width: 72.5rem;
-  padding: 0 2rem 2rem;
-  margin: 0 auto;
 }
 
 .maxWidth {
@@ -67,9 +60,9 @@
   width: 100%;
   border: 4px solid $white;
   max-width: 39.5rem;  
-  margin: 5.6rem auto 2.4rem;
+  margin: 2.75rem auto 2.75rem;
   @include bigger {
-    margin: 7.25rem auto 5rem;
+    margin-bottom: 5rem;
   }
 }
 

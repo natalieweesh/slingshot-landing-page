@@ -1,23 +1,25 @@
 @import "./variables.module";
 
-.phoneSection {
+.phoneSectionBigger {
   position: relative;
   width: 100%;
   margin-bottom: 6.25rem;
   z-index: 0;
+  display: none;
   &::before {
     content: '';
     z-index: -1;
     position: absolute;
-    width: 150%;
     height: 150%;
     top: -25%;
-    left: -25%;
+    width: 100%;
+    left: 0;
     background: url('../public/images/dots.svg') no-repeat;
     background-position: center center;
     background-size: contain;
   }
   @include bigger {
+    display: block;
     margin-bottom: 18.75rem;
   }
 }
@@ -62,34 +64,44 @@
 }
 
 .square1 {
-  top: 50%;
-  left: -5%;
+  top: 40vh;
+  left: 6%;
   @include bigger {
+    top: 50%;
     left: 0%;
   }
 }
 
 .square2 {
   left: 10%;
-  top: 10%;
+  top: 40vh;
   @include bigger {
+    top: 10%;
     left: 15%;
   }
 }
 
 .square3 {
-  left: 10%;
-  top: 80%;
+  left: 2%;
+  top: 45vh;
+  @include bigger {
+    left: 10%;
+    top: 80%;
+  }
 }
 
 .square4 {
-  left: 8%;
-  top: 35%;
+  left: -5%;
+  top: 50vh;
+  @include bigger {
+    left: 8%;
+    top: 35%;
+  }
 }
 
 .square5 {
   left: 25%;
-  top: 80%;
+  top: 50vh;
   @include bigger {
     top: 88%;
     left: 40%;
@@ -98,30 +110,61 @@
 
 .square6 {
   right: 5%;
-  bottom: 5%;
+  top: 45vh;
   @include bigger {
     right: 15%;
-    bottom: 20%;
+    top: 70%;
   }
 }
 
 .square7 {
   right: 0%;
-  bottom: 45%;
+  top: 40vh;
   @include bigger {
     right: 10%;
+    top: 55%;
   }
 }
 
 .square8 {
   right: 15%;
-  top: 35%;
+  top: 35vh;
   @include bigger {
     top: 30%;
   }
 }
 
 .square9 {
-  top: 8%;
+  top: 58%;
   right: 8%;
+  @include bigger {
+    top: 8%;
+  }
+}
+
+
+.phoneSection {
+  position: relative;
+  height: 190vh;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  .phone {
+    height: auto;
+    margin: 0 auto;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+  }
+  @include bigger {
+    display: none;
+  }
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  padding: 2rem 0 0;
+  background: url('../public/images/dots.svg') no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
 }

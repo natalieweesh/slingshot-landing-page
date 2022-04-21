@@ -32,14 +32,14 @@ $twitterGray: #7D8088;
   font-size: 2rem;
   line-height: 2.75rem;
   font-family: SequelBlack;
-  margin: 2.6rem auto 4.4rem;
+  margin: 2.6rem auto 1.75rem;
   @include bigger {
     font-size: 2.5rem;
   }
   @include huger {
     font-size: 2.75rem;
     line-height: 3.5rem;
-    margin: 5.8rem auto 2.6rem;
+    margin-top: 5.8rem;
   }
 }
 
@@ -64,4 +64,14 @@ $twitterGray: #7D8088;
     font-size: 1.5rem;
     line-height: 2.1rem;
   }
+}
+
+.innerContainer {
+  max-width: 72.5rem;
+  padding: 0 2rem 2rem;
+  margin: 0 auto;
+}
+
+.noPaddingBottom {
+  padding-bottom: 0;
 }
