@@ -148,6 +148,7 @@
   height: 190vh;
   margin-top: 1rem;
   margin-bottom: 5rem;
+  border: 1px solid red;
   .phone {
     height: auto;
     margin: 0 auto;
@@ -161,7 +162,7 @@
 }
 
 .sticky {
-  position: sticky;
+  // position: sticky;
   top: 0;
   padding: 2rem 0 0;
   background: url('../public/images/dots.svg') no-repeat;
