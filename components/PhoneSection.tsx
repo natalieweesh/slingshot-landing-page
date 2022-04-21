@@ -6,7 +6,6 @@ import styles from './PhoneSection.module.scss';
 
 export const PhoneSection = () => {
   return (
-    <>
     <ParallaxProvider>
       <div className={cn(styles.innerContainer, styles.noPaddingBottom)}>
         <div className={styles.phoneSectionBigger}>
@@ -22,8 +21,6 @@ export const PhoneSection = () => {
           <Parallax className={cn(styles.parallaxSquare, styles.square9)} speed={8}><div className={styles.square}><Image src="/images/square9.svg" layout="responsive" width="100%" height="100%" /></div></Parallax>
         </div>
       </div>
-    </ParallaxProvider>
-    <ParallaxProvider>
       <div className={styles.phoneSection}>
         <div className={cn(styles.sticky)}>
           <div className={styles.phone}><Image src="/images/phone.svg" width={360} height={730} /></div>
@@ -39,6 +36,5 @@ export const PhoneSection = () => {
         </div>
       </div>
     </ParallaxProvider>
-    </>
   )
 }

@@ -6,6 +6,7 @@
   margin-bottom: 6.25rem;
   z-index: 0;
   display: none;
+  display: block;
   &::before {
     content: '';
     z-index: -1;
@@ -144,6 +145,7 @@
 
 
 .phoneSection {
+  display: none;
   position: relative;
   height: 150vh;
   margin-top: 1rem;
