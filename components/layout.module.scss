@@ -60,9 +60,9 @@
   width: 100%;
   border: 4px solid $white;
   max-width: 39.5rem;  
-  margin: 2.75rem auto 2.75rem;
+  margin: 3.75rem auto 2.75rem;
   @include bigger {
-    margin: 3.75rem auto 5rem;
+    margin-bottom: 5rem;
   }
 }
 

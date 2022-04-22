@@ -5,18 +5,6 @@ import Image from 'next/image';
 import styles from './PhoneSection.module.scss';
 
 export const PhoneSection = () => {
-  // const [offset, setOffset] = useState(0);
-
-  //   useEffect(() => {
-  //     const phoneStartPosition = document.getElementById('phone-section').getBoundingClientRect().top;
-  //       const onScroll = () => setOffset(window.pageYOffset);
-  //       // clean up code
-  //       window.removeEventListener('scroll', onScroll);
-  //       window.addEventListener('scroll', onScroll, { passive: true });
-  //       console.log('hey', offset, phoneStartPosition)
-
-  //       return () => window.removeEventListener('scroll', onScroll);
-  //   }, []);
   return (
     <ParallaxProvider>
       <div className={cn(styles.innerContainer, styles.noPaddingBottom)}>
