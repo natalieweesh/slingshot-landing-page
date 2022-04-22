@@ -3,6 +3,7 @@ import animateScrollTo from 'animated-scroll-to';
 import Image from 'next/image';
 import { CardsSection } from './CardsSection';
 import { PhoneSection } from './PhoneSection';
+import { PhoneSection2 } from './PhoneSection2';
 import { ThreeColumnSection } from './ThreeColumnSection';
 import { TwitterSection } from './TwitterSection';
 import styles from './layout.module.scss';
@@ -26,6 +27,8 @@ const Layout = () => {
           <header className={cn(styles.header2, styles.center, styles.maxWidth)}>Slingshot is a web3 trading platform that lets you trade thousands of crypto tokens at the best prices, at lightning fast speed.</header>
           <ThreeColumnSection />
         </div>
+        <p>testing latest iteration of parallax section: </p>
+        <PhoneSection2 />
         <CardsSection />
         <div className={styles.innerContainer}>
           <header className={cn(styles.header2, styles.center)}>People already loving Slingshot</header>

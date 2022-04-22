@@ -1,0 +1,162 @@
+@import "./variables.module";
+
+.phoneSectionBigger {
+  position: relative;
+  width: 100%;
+  margin-bottom: 6.25rem;
+  z-index: 0;
+  &::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    height: 150%;
+    top: -25%;
+    width: 100%;
+    left: 0;
+    background: url('../public/images/dots.svg') no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+  @include bigger {
+    margin-bottom: 18.75rem;
+  }
+}
+.phone {
+  height: auto;
+  max-width: 30rem;
+}
+.phoneWrapper {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 53rem;
+  margin: 11% auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+.square {
+  width: 4.625rem;
+  height: 5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  transform: scale(0.7);
+  position: absolute;
+  @include bigger {
+    position: relative;
+    transform: scale(1);
+  }
+}
+.largeSquare {
+  width: 11.5rem;
+  height: 11.5rem;
+}
+.mediumSquare {
+  width: 7.25rem;
+  height: 7.875rem;
+}
+.parallaxSquare {
+  position: absolute;
+}
+
+.square1 {
+  top: 40%;
+  left: 0%;
+  @include mediumer {
+    left: 15%;
+  }
+  @include bigger {
+    top: 50%;
+    left: 12%;
+  }
+}
+
+.square2 {
+  left: 15%;
+  top: 25%;
+  @include mediumer {
+    left: 25%;
+  }
+  @include bigger {
+    top: 10%;
+    left: 15%;
+  }
+}
+
+.square3 {
+  left: 2%;
+  top: 70%;
+  @include mediumer {
+    left: 15%;
+    top: 68%;
+  }
+  @include bigger {
+    left: 10%;
+    top: 80%;
+  }
+}
+
+.square4 {
+  left: 15%;
+  top: 55%;
+  @include mediumer {
+    top: 60%;
+    left: 30%;
+  }
+  @include bigger {
+    left: 8%;
+    top: 35%;
+  }
+}
+
+.square5 {
+  left: 25%;
+  top: 70%;
+  @include mediumer {
+    left: 36%;
+  }
+  @include bigger {
+    top: 88%;
+    left: 40%;
+  }
+}
+
+.square6 {
+  right: 35%;
+  top: 60%;
+  @include bigger {
+    right: 15%;
+    top: 70%;
+  }
+}
+
+.square7 {
+  right: 50%;
+  top: 55%;
+  @include bigger {
+    right: 10%;
+    top: 55%;
+  }
+}
+
+.square8 {
+  right: 45%;
+  top: 35%;
+  @include mediumer {
+    right: 35%;
+  }
+  @include bigger {
+    right: 15%;
+    top: 30%;
+  }
+}
+
+.square9 {
+  top: 23%;
+  right: 48%;
+  @include bigger {
+    right: 8%;
+    top: 8%;
+  }
+}
