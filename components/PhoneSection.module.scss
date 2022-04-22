@@ -66,7 +66,7 @@
 }
 
 .square1 {
-  top: 40vh;
+  top: 70vh;
   left: 6%;
   @include bigger {
     top: 50%;
@@ -76,7 +76,7 @@
 
 .square2 {
   left: 10%;
-  top: 40vh;
+  top: 60vh;
   @include bigger {
     top: 10%;
     left: 15%;
@@ -85,7 +85,7 @@
 
 .square3 {
   left: 2%;
-  top: 45vh;
+  top: 100vh;
   @include bigger {
     left: 10%;
     top: 80%;
@@ -93,8 +93,8 @@
 }
 
 .square4 {
-  left: -5%;
-  top: 50vh;
+  left: 5%;
+  top: 85vh;
   @include bigger {
     left: 8%;
     top: 35%;
@@ -103,7 +103,7 @@
 
 .square5 {
   left: 25%;
-  top: 50vh;
+  top: 100vh;
   @include bigger {
     top: 88%;
     left: 40%;
@@ -111,8 +111,8 @@
 }
 
 .square6 {
-  right: 5%;
-  top: 45vh;
+  right: 35%;
+  top: 90vh;
   @include bigger {
     right: 15%;
     top: 70%;
@@ -120,8 +120,8 @@
 }
 
 .square7 {
-  right: 0%;
-  top: 40vh;
+  right: 40%;
+  top: 75vh;
   @include bigger {
     right: 10%;
     top: 55%;
@@ -129,16 +129,16 @@
 }
 
 .square8 {
-  right: 15%;
-  top: 60vh;
+  right: 45%;
+  top: 65vh;
   @include bigger {
     top: 30%;
   }
 }
 
 .square9 {
-  top: 100vh;
-  right: 8%;
+  top: 58vh;
+  right: 48%;
   @include bigger {
     top: 8%;
   }
@@ -147,10 +147,9 @@
 
 .phoneSection {
   position: relative;
-  height: 200vh;
+  height: 190vh;
   margin-top: 1rem;
   margin-bottom: 5rem;
-  border: 1px solid red;
   .phone {
     height: auto;
     margin: 0 auto;
