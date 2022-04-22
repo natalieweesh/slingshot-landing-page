@@ -132,6 +132,7 @@
   right: 45%;
   top: 65vh;
   @include bigger {
+    right: 15%;
     top: 30%;
   }
 }
@@ -140,6 +141,7 @@
   top: 58vh;
   right: 48%;
   @include bigger {
+    right: 8%;
     top: 8%;
   }
 }
