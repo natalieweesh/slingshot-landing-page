@@ -27,8 +27,6 @@ const Layout = () => {
           <header className={cn(styles.header2, styles.center, styles.maxWidth)}>Slingshot is a web3 trading platform that lets you trade thousands of crypto tokens at the best prices, at lightning fast speed.</header>
           <ThreeColumnSection />
         </div>
-        <p>testing latest iteration of parallax section: </p>
-        <PhoneSection2 />
         <CardsSection />
         <div className={styles.innerContainer}>
           <header className={cn(styles.header2, styles.center)}>People already loving Slingshot</header>

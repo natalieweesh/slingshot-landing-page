@@ -4,6 +4,7 @@ import { Parallax } from 'react-scroll-parallax';
 import Image from 'next/image';
 import styles from './PhoneSection2.module.scss';
 
+//TODO: this is the latest parallax verion, just for testing purposes
 export const PhoneSection2 = () => {
   return (
     <div className={cn(styles.innerContainer, styles.noPaddingBottom)}>
